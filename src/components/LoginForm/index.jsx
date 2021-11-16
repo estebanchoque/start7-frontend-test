@@ -4,7 +4,7 @@ import { validate } from "../../utils/validateLoginForm";
 import { login } from "../../controllers/loginController";
 import facebookIcon from "../../assets/facebook-icon.svg";
 import googleIcon from "../../assets/google-icon.svg";
-
+import "animate.css";
 import "./LoginForm.css";
 
 export default function LoginForm() {
@@ -52,7 +52,7 @@ export default function LoginForm() {
         <div className="username-field form-group form-floating">
           <input
             required
-            id="floatingInput"
+            id="usernamefloatingInput"
             className={`form-control ${
               Boolean(errors.username) ? "is-invalid" : ""
             }`}
@@ -63,7 +63,7 @@ export default function LoginForm() {
             onChange={handleInputChange}
             aria-label="E-mail"
           />
-          <label htmlFor="floatingInput">E-mail</label>
+          <label htmlFor="usernamefloatingInput">E-mail</label>
           {Boolean(errors.username) && (
             <div className="invalid-feedback">{errors.username}</div>
           )}
@@ -72,7 +72,7 @@ export default function LoginForm() {
         <div className="senha-field form-group form-floating">
           <input
             required
-            id="floatingInput"
+            id="passwordfloatingInput"
             className={`form-control ${
               Boolean(errors.password) ? "is-invalid" : ""
             }`}
@@ -83,7 +83,7 @@ export default function LoginForm() {
             onChange={handleInputChange}
             aria-label="Senha"
           />
-          <label htmlFor="floatingInput">Senha</label>
+          <label htmlFor="passwordfloatingInput">Senha</label>
           {Boolean(errors.password) && (
             <div className="invalid-feedback">{errors.password}</div>
           )}
