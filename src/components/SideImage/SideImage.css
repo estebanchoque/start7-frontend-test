@@ -1,0 +1,8 @@
+.side-image-container {
+  position: absolute;
+  right: 0;
+  background-color: #6da3f1;
+  width: 701px;
+  height: 900px;
+  border-radius: 80px 0px 0px 80px;
+}
