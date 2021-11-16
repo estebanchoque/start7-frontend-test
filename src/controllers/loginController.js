@@ -11,7 +11,7 @@ export const login = async (user) => {
   };
   try {
     const response = await fetch(
-      `https://api-flordeemprendedor.start-7.com/api/auth/login/`,
+      `https://api-flordeemprendedora.start-7.com/api/auth/login/`,
       settings
     );
     const data = await response.json();
