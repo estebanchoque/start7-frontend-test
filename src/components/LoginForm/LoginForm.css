@@ -1,0 +1,64 @@
+h1,
+h3,
+p {
+  font-family: "Asap", sans-serif;
+  color: #5594ef;
+  font-style: normal;
+}
+
+.login-form-container {
+  width: 498px;
+  margin: 144px 821px 145px 120px;
+}
+
+.form-title {
+  /* position: absolute; */
+  width: 498px;
+  height: 39px;
+  left: 121px;
+  top: 172px;
+
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 39px;
+}
+
+.form-subtitle {
+  /* position: absolute; */
+  width: 361px;
+  height: 52px;
+  left: 121px;
+  top: 235px;
+
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+.username-field {
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  color: #5594ef;
+
+  /* position: absolute; */
+  width: 498px;
+  height: 56px;
+  left: 120px;
+  top: 327px;
+}
+
+.senha-field {
+  /* position: absolute; */
+  width: 498px;
+  height: 56px;
+  left: 120px;
+  top: 403px;
+}
+
+.submit-btn {
+  /* position: absolute; */
+  left: 8.33%;
+  right: 57.08%;
+  top: 59.89%;
+  bottom: 34.78%;
+}
