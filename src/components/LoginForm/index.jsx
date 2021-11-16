@@ -1,5 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { validate } from "../../utils/validateLoginForm";
 import { login } from "../../controllers/loginController";
+import facebookIcon from "../../assets/facebook-icon.svg";
+import googleIcon from "../../assets/google-icon.svg";
+
 import "./LoginForm.css";
 
 export default function LoginForm() {
@@ -7,12 +12,19 @@ export default function LoginForm() {
     username: "",
     password: "",
   });
+  const [errors, setErrors] = useState({});
 
   const handleInputChange = (e) => {
     setInput({
       ...input,
       [e.target.name]: e.target.value,
     });
+    setErrors(
+      validate({
+        ...input,
+        [e.target.name]: e.target.value,
+      })
+    );
   };
 
   const handleSubmit = async (e) => {
@@ -25,7 +37,9 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="login-form-container">
+    <section className="login-form-container">
+      <div className="top-divider" />
+
       <header className="text-start">
         <h1 className="form-title">Bem-vindo de volta!</h1>
         <p className="form-subtitle">
@@ -33,11 +47,15 @@ export default function LoginForm() {
           <br /> projetos no ProjetoList
         </p>
       </header>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
+
+      <form className="login-form-wrapper" onSubmit={handleSubmit}>
+        <div className="username-field form-group form-floating">
           <input
             required
-            className="username-field form-control"
+            id="floatingInput"
+            className={`form-control ${
+              Boolean(errors.username) ? "is-invalid" : ""
+            }`}
             type="email"
             placeholder="E-mail"
             name="username"
@@ -45,11 +63,19 @@ export default function LoginForm() {
             onChange={handleInputChange}
             aria-label="E-mail"
           />
+          <label for="floatingInput">E-mail</label>
+          {Boolean(errors.username) && (
+            <div className="invalid-feedback">{errors.username}</div>
+          )}
         </div>
-        <div className="form-group">
+
+        <div className="senha-field form-group form-floating">
           <input
             required
-            className="senha-field form-control"
+            id="floatingInput"
+            className={`form-control ${
+              Boolean(errors.password) ? "is-invalid" : ""
+            }`}
             type="password"
             placeholder="Senha"
             name="password"
@@ -57,10 +83,18 @@ export default function LoginForm() {
             onChange={handleInputChange}
             aria-label="Senha"
           />
+          <label for="floatingInput">Senha</label>
+          {Boolean(errors.password) && (
+            <div className="invalid-feedback">{errors.password}</div>
+          )}
         </div>
-        <div className="form-group text-end">
-          <a href="/">Esqueceu sua senha?</a>
+
+        <div className="reset-password text-end">
+          <Link to="/reset-password">
+            <p>Esqueceu sua senha?</p>
+          </Link>
         </div>
+
         <div className="form-group">
           <button
             type="submit"
@@ -69,22 +103,38 @@ export default function LoginForm() {
             Entrar
           </button>
         </div>
-        <div className="form-group">
+      </form>
+
+      <div className="text-center">
+        <div className="signin-icons">
           <p>OU ENTRE COM</p>
+          <div className="icons d-flex justify-content-between">
+            <div id="facebook-icon">
+              <Link to="/signin">
+                <img src={facebookIcon} alt="Facebook Icon" />
+              </Link>
+            </div>
+            <div id="google-icon">
+              <Link to="/sigin">
+                <img src={googleIcon} alt="Facebook Icon" />
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="form-group">
+
+        <div>
           <p>
             Ainda não tem uma conta?&nbsp;
-            <a
-              href="/"
+            <Link
               className="text-decoration-none"
+              to="/signup"
               onClick={(e) => e.preventDefault()}
             >
               <b>Cadastre-se</b>
-            </a>
+            </Link>
           </p>
         </div>
-      </form>
-    </div>
+      </div>
+    </section>
   );
 }

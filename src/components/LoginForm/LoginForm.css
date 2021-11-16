@@ -7,58 +7,102 @@ p {
 }
 
 .login-form-container {
-  width: 498px;
-  margin: 144px 821px 145px 120px;
+  position: absolute;
+  left: 0;
+  width: 31.125rem;
+  margin: 9rem 51.313rem 9.063rem 7.5rem;
 }
 
 .form-title {
-  /* position: absolute; */
+  margin-bottom: 1.5rem;
   width: 498px;
   height: 39px;
-  left: 121px;
-  top: 172px;
 
   font-weight: 600;
-  font-size: 34px;
+  font-size: 2.125rem;
   line-height: 39px;
 }
 
 .form-subtitle {
-  /* position: absolute; */
+  margin-bottom: 2.5rem;
   width: 361px;
   height: 52px;
-  left: 121px;
-  top: 235px;
 
   font-weight: normal;
-  font-size: 15px;
-  line-height: 26px;
+  font-size: 0.938rem;
+  line-height: 1.625rem;
+}
+
+.login-form-wrapper label {
+  font-family: "Asap", sans-serif;
+  color: #9ec2f6;
+  font-style: normal;
+  font-size: 1rem;
 }
 
 .username-field {
   font-family: "Asap", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   color: #5594ef;
+  margin-bottom: 1.25rem;
 
-  /* position: absolute; */
-  width: 498px;
+  width: 31.125rem;
   height: 56px;
-  left: 120px;
-  top: 327px;
 }
 
 .senha-field {
-  /* position: absolute; */
-  width: 498px;
-  height: 56px;
-  left: 120px;
-  top: 403px;
+  font-family: "Asap", sans-serif;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+
+  width: 31.125rem;
+  height: 3.5rem;
 }
 
 .submit-btn {
-  /* position: absolute; */
-  left: 8.33%;
-  right: 57.08%;
-  top: 59.89%;
-  bottom: 34.78%;
+  height: 3rem;
+}
+
+.reset-password {
+  height: 1rem;
+  margin-bottom: 2.5rem;
+  color: #6da3f1;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.login-form-wrapper {
+  margin-bottom: 2.5rem;
+}
+
+.signin-icons {
+  margin-bottom: 2rem;
+}
+
+.signin-icons p {
+  font-size: 0.813rem;
+}
+
+.icons {
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  width: 8rem;
+}
+
+#facebook-icon {
+  width: 3.25rem;
+  height: 3rem;
+}
+
+#google-icon {
+  width: 3.25rem;
+  height: 3rem;
+}
+
+.top-divider {
+  background-color: #5594ef;
+  margin-bottom: 1.5rem;
+  width: 2rem;
+  height: 0.25rem;
 }
