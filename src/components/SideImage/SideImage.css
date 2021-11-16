@@ -2,7 +2,31 @@
   position: absolute;
   right: 0;
   background-color: #6da3f1;
-  width: 701px;
-  height: 900px;
+  width: 43.813rem;
+  height: 56.25rem;
   border-radius: 80px 0px 0px 80px;
+}
+
+.side-image-container p {
+  color: #ffffff;
+}
+
+.help-link p,
+.help-link a {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.063rem;
+  color: #ffffff;
+}
+
+.image-placeholder {
+  margin: 6.125rem 0 11.125rem 2rem;
+}
+
+.wrapper {
+  margin: 7.25rem 3rem 3rem 4.953rem;
+}
+
+.footer img {
+  margin-left: 0.75rem;
 }

@@ -44,7 +44,7 @@ export default function LoginForm() {
         <h1 className="form-title">Bem-vindo de volta!</h1>
         <p className="form-subtitle">
           Estamos felizes que esteja de volta para retomar seus
-          <br /> projetos no ProjetoList
+          <br /> projetos no ProjetoList.
         </p>
       </header>
 
@@ -63,7 +63,7 @@ export default function LoginForm() {
             onChange={handleInputChange}
             aria-label="E-mail"
           />
-          <label for="floatingInput">E-mail</label>
+          <label htmlFor="floatingInput">E-mail</label>
           {Boolean(errors.username) && (
             <div className="invalid-feedback">{errors.username}</div>
           )}
@@ -83,7 +83,7 @@ export default function LoginForm() {
             onChange={handleInputChange}
             aria-label="Senha"
           />
-          <label for="floatingInput">Senha</label>
+          <label htmlFor="floatingInput">Senha</label>
           {Boolean(errors.password) && (
             <div className="invalid-feedback">{errors.password}</div>
           )}
@@ -99,6 +99,7 @@ export default function LoginForm() {
           <button
             type="submit"
             className="submit-btn btn btn-primary col-12 rounded-pill"
+            disabled={Object.keys(errors).length}
           >
             Entrar
           </button>
