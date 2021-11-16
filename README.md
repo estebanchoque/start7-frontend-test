@@ -14,3 +14,7 @@ Para inicializar el proyecto:
 ### `npm start`
 
 Ir a [http://localhost:3000](http://localhost:3000).
+
+### NOTA
+
+Acceder a la ruta `/login` para visualizar el componente.
